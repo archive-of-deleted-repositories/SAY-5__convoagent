@@ -17,7 +17,6 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-
 _PATTERNS: dict[str, re.Pattern[str]] = {
     "email": re.compile(r"\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b"),
     "order_id": re.compile(r"\b(?:order|ord|#)\s*#?\s*([A-Z0-9-]{4,})\b", re.IGNORECASE),
