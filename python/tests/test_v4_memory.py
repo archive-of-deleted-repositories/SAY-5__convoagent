@@ -27,9 +27,9 @@ def test_memory_overwrites_on_correction() -> None:
 
 def test_memory_render_summarizes_facts() -> None:
     m = Memory()
-    m.update_from("order #42, email alice@x.com")
+    m.update_from("order #ABC1234, email alice@x.com")
     rendered = m.render()
-    assert "order_id=42" in rendered
+    assert "order_id=ABC1234" in rendered
     assert "email=alice@x.com" in rendered
 
 
